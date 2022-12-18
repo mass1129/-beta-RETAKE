@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class K_1RScore : MonoBehaviour
 {
     public static K_1RScore Instance;
-    
+
     public List<AudioClip> scoreSoundPool = new List<AudioClip>();
 
     public AudioSource scoreAudioSource;
@@ -80,28 +80,28 @@ public class K_1RScore : MonoBehaviour
 
 
             }
-            else if (curScore > 10&& curScore < 50)
+            else if (curScore > 10 && curScore < 50)
             {
-                PlayAttackSound(curScore%5);
-              
+                PlayAttackSound(curScore % 5);
+
                 curScoreUI.text = "일반 헤드샷으로 적 처치" + " : " + "5/ 5" + "\r\n" +
-                    "궁극기 헤드샷으로 적 처치" + " : 5/ 5" + "\r\n" + "적을 50마리 처치 : " + (curScore-10) +" 마리 처치";
-               
-            }    
+                    "궁극기 헤드샷으로 적 처치" + " : 5/ 5" + "\r\n" + "적을 50마리 처치 : " + (curScore - 10) + " 마리 처치";
+
+            }
             else if (curScore >= 50)
             {
                 curScoreUI.text = "일반 헤드샷으로 적 처치" + " : " + "5/ 5" + "\r\n" +
                     "궁극기 헤드샷으로 적 처치" + " : 5/ 5" + "\r\n" + "적을 50마리 처치 : " + (curScore - 10) + " 마리 처치"
                      + "\r\n" + "P 키 : Boss";
 
-            }    
+            }
 
         }
 
     }
-    public void GenerateEnemy ()
+    public void GenerateEnemy()
     {
-        for(int i=0;i<5;i++)
+        for (int i = 0; i < 5; i++)
         {
             GameObject enemy = Instantiate(enemyFactory);
             enemy.transform.position = transform.GetChild(i).transform.position;
@@ -135,12 +135,14 @@ public class K_1RScore : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             SceneManager.LoadScene("K_MapTest 3");
-        if (Input.GetKeyUp(KeyCode.T))
-        {
-            SceneManager.LoadScene("jettCinemachine");
-        //if (Input.GetKeyUp(KeyCode.P))
-        //{
-        //    SceneManager.LoadScene("jettCinemachine");
-        //}
+            if (Input.GetKeyUp(KeyCode.T))
+            {
+                SceneManager.LoadScene("jettCinemachine");
+                //if (Input.GetKeyUp(KeyCode.P))
+                //{
+                //    SceneManager.LoadScene("jettCinemachine");
+                //}
+            }
         }
+    }
 }

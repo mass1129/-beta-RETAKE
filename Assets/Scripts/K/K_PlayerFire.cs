@@ -93,9 +93,9 @@ public class K_PlayerFire : MonoBehaviour
     bool uAnimEnd = false;
 
 
+
+
     [SerializeField] AttackSoundGenerator attackSoundGenerator;
-
-
 
 
     private void Awake()
