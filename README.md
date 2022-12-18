@@ -11,10 +11,9 @@
 
 * 오프닝 씬  
   <img src="Image/main_startScene.gif"></img>  
-  <img src="Image/introScene1.png" height="200px"></img>  
+  * **UI 애니메이션**  
+  <img src="Image/introScene1.png" height="200px"></img> <img src="Image/introsceneTimeline.png" height="200px"></img>    
 
-* Game interface
-  * **Player's HP** on the top left corner
 
 * Player models
   * All the original models and their animations were found from **[Mixamo](https://www.mixamo.com/)**, which is a pretty good game model website run by Adobe
