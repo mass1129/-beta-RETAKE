@@ -9,8 +9,9 @@
 
 ## Game logic and functionality
 
-* Login panel
-  * Input your **player name** and the **room name** you want to join
+* 오프닝 씬  
+  <img src="Image/main_startScene.gif"></img>  
+  <img src="Image/introScene1.png" height="200px"></img>  
 
 * Game interface
   * **Player's HP** on the top left corner
@@ -18,7 +19,7 @@
 * Player models
   * All the original models and their animations were found from **[Mixamo](https://www.mixamo.com/)**, which is a pretty good game model website run by Adobe
     * **Policeman**: a policeman-like model with yellow skin
-    * <img src="Images/9.jpg" height="200px"></img> <img src="Images/11.jpg" height="200px"></img> <img src="Images/10.jpg" height="200px"></img>
+    * <img src="Images/introScene1.png" height="200px"></img> <img src="Images/11.jpg" height="200px"></img> <img src="Images/10.jpg" height="200px"></img>
 
   * **Animations**:
     * **Walk** towards four different directions
@@ -51,25 +52,13 @@
   * The traditional way
   * Cheap and easy to use
 
-### Kinect Details
 
-* **Shooting**：
-  * ㅇㄹㅇㅎ
-
-* **Moving**:
-  * 
-
-* **Jumping**:
-  * 
-
-* **View Rotation**:
-  * 
-
-* <img src="Images/skeleton_overview.png" style="width:110px"> </img><img src="Images/shooting.png" style="width:134px"></img> <img src="Images/jumping.png" style="width:122px"> </img><img src="Images/rotation.png" style="width:156px"></img>
 
 ## Contribution
 
 
 
 ## License
+
+
 
