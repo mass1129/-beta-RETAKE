@@ -10,7 +10,7 @@
 ## Game logic and functionality
 
 * 오프닝 씬  
-  <img src=></img>  
+  <img src=main_startScene.gif></img>  
   * **UI 애니메이션**  
   <img src="Image/introScene1.png" height="200px"></img> <img src="Image/introsceneTimeline.png" height="200px"></img>    
 
