@@ -56,7 +56,7 @@
     * **스킬 종류**  
       * **대시** : 앞, 뒤, 좌, 우  
 
-        <img src="Image/rightDash.gif" style="width:400px"></img> <img src="Image/leftdash.gif" style="width:400px"></img> <img src="Image/BackDash.gif" style="width:400px"></img> <img src="Image/unnamed.gif" style="width:400px"></img>  
+        <img src="Image/unnamed.gif" style="width:400px"></img> <img src="Image/BackDash.gif" style="width:400px"></img> <img src="Image/leftdash.gif" style="width:400px"></img> <img src="Image/rightDash.gif" style="width:400px"></img>  
       * **도약**  
         <img src="Image/JumpHigh.gif" style="width:400px"></img>
       * **일반 공격**  : 양쪽 손 번갈아 공격 **콤보 시스템 적용**  
