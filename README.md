@@ -32,8 +32,8 @@
 * 플레이어 모델
   *  **[Mixamo](https://www.mixamo.com/)** : **Alien Soldier** 모델  
       <img src="Image/charModel.png" height="200px"></img>  
-* 카메라 및 파티클 Root 세팅  
-  <img src="Image/PlayerRoot.png" height="200px"></img>  
+  * 카메라 및 파티클 Root 세팅  
+    <img src="Image/PlayerRoot.png" height="200px"></img>  
 
 ## 애니메이션 : Full Body 1인칭
   * **걷기&뛰기** : **Animator** Base Layer 
