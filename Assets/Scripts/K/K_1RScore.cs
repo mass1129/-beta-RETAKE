@@ -37,8 +37,6 @@ public class K_1RScore : MonoBehaviour
             curScore = value;
 
 
-
-            // curScoreUI.text = "Current Score : " + curScore;
             if (curScore > 0 && curScore < 5)
             {
 
@@ -111,13 +109,10 @@ public class K_1RScore : MonoBehaviour
     void Start()
     {
 
-        //curScoreUI.text = "Current Score : " + curScore;
         curScoreUI.text = "일반 헤드샷으로 적 처치" + " : 0 / 5";
     }
 
 
-
-    // Update is called once per frame
     void PlayAttackSound(int num)
     {
         scoreAudioSource.clip = scoreSoundPool[num];
@@ -138,10 +133,7 @@ public class K_1RScore : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.T))
             {
                 SceneManager.LoadScene("jettCinemachine");
-                //if (Input.GetKeyUp(KeyCode.P))
-                //{
-                //    SceneManager.LoadScene("jettCinemachine");
-                //}
+
             }
         }
     }

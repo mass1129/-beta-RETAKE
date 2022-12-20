@@ -9,11 +9,10 @@ public class K_HeadShot : MonoBehaviour
     public ParticleSystem headShotEffect;
     
 
-    private void OnDisable()
+    public void HeadShot()
     {
-        head.SetActive(false);
-       
-        headShotEffect.Play();
+        Instantiate(headShotEffect, transform.position, Quaternion.identity);
+        
     }
 
 }

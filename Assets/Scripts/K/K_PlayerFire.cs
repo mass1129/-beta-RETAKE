@@ -132,7 +132,7 @@ public class K_PlayerFire : MonoBehaviour
             UAttack();
 
         }
-        HandleJettUltimateFire2();
+        HandleJettUltimateFire();
 
        
     }
@@ -277,7 +277,7 @@ public class K_PlayerFire : MonoBehaviour
                     if (kenemy != null)
                     {
                         kenemy.AddDamage(damage * headDamageMultiple);
-                        
+                        hit.transform.GetComponentInChildren<K_HeadShot>().HeadShot();
 
                     }
                     N_MiniBoss1 miniBoss1 = hit.transform.GetComponentInParent<N_MiniBoss1>();
@@ -786,19 +786,6 @@ public class K_PlayerFire : MonoBehaviour
         Destroy(uTrailPool[num].gameObject, uTrailPool[num].time);
     }
 
-
-
-   
-
-    
-
-
-    
-
-
-
-   
-
     void StartBulletAnim1()
     {
         u1Start = false;
@@ -827,8 +814,6 @@ public class K_PlayerFire : MonoBehaviour
         }
     }
 
-
-
     void StopBulletAnim2()
     {
         
@@ -849,7 +834,7 @@ public class K_PlayerFire : MonoBehaviour
 
     
 
-    void HandleJettUltimateFire2()
+    void HandleJettUltimateFire()
     {
         ultimateAttempts += Time.deltaTime;
         ulitimateImg.fillAmount = ultimateAttempts / jettStates.maxUltimateAttempts;
@@ -999,28 +984,29 @@ public class K_PlayerFire : MonoBehaviour
     }
 
    
+    
+    void OnEndUltimate()
+    {
         //대쉬 종료시 "궁극기 중"상태 해제, 대쉬 시작시간 0으로 초기화
-        void OnEndUltimate()
+        disableAttack = false;
+        //궁극기중 상태 해제
+        isUltimating = false;
+        //궁극기 시작시간 초기화
+        ultimateStartTime = 0f;
+        j = 1;
+        k = 0;
+        //배열 삭제
+        for (i = 0; i < uBulletPoolSize; i++)
         {
-            disableAttack = false;
-            //궁극기중 상태 해제
-            isUltimating = false;
-            //궁극기 시작시간 초기화
-            ultimateStartTime = 0f;
-            j = 1;
-            k = 0;
-            //배열 삭제
-            for (i = 0; i < uBulletPoolSize; i++)
+            if (rigidPool[i] == false)
             {
-                if (rigidPool[i] == false)
-                {
                     
-                    Destroy(uBulletPool[i]);
-                }
+                Destroy(uBulletPool[i]);
             }
-           speed1 = 0f;
-        
         }
+        speed1 = 0f;
+        
+    }
 
    
 }

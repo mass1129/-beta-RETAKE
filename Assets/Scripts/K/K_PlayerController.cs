@@ -37,10 +37,8 @@ public class K_PlayerController : MonoBehaviour
     private int _yVelHash;
     [System.NonSerialized] public Vector3 _currentVelocity;
 
-    private K_JettAnimation jettAnimation;
     private CharacterController cc;
     private K_PlayerStates playerStates;
-    private K_JettController jettController;
 
     private void Awake()
     {
@@ -58,8 +56,6 @@ public class K_PlayerController : MonoBehaviour
         
         _xVelHash = Animator.StringToHash("X_Velocity");
         _yVelHash = Animator.StringToHash("Y_Velocity");
-        jettController = GetComponent<K_JettController>();
-
 
     }
 
@@ -96,23 +92,20 @@ public class K_PlayerController : MonoBehaviour
             
              moveDir = Vector3.ClampMagnitude(transform.right * inputVector.x + transform.forward * inputVector.z, 1.0f);
             //달릴때는 runSpeed로 이동한다.
-           
-            
-                if (isRunning)
-                {
-                    _currentVelocity = inputVector * playerStates.runSpeed;
-                    cc.Move(moveDir * playerStates.runSpeed * Time.deltaTime);
-                }
-                //그 외에는 걷는 속도로 이동한다. 
-                else
-                {
-                    _currentVelocity = inputVector * playerStates.walkSpeed;
-                    cc.Move(moveDir * playerStates.walkSpeed * Time.deltaTime);
 
-                }
             float targetSpeed = isRunning ? playerStates.runSpeed : playerStates.walkSpeed;
+            if (isRunning)
+            {   
+                cc.Move(moveDir * targetSpeed * Time.deltaTime);
+            }
+            //그 외에는 걷는 속도로 이동한다. 
+            else
+            {
+                cc.Move(moveDir * targetSpeed * Time.deltaTime);
+            }
+            
              _currentVelocity.x = Mathf.Lerp(_currentVelocity.x, inputVector.x * targetSpeed, AnimBlendSpeed*Time.fixedDeltaTime);
-             _currentVelocity.y = Mathf.Lerp(_currentVelocity.y, inputVector.y * targetSpeed, AnimBlendSpeed * Time.fixedDeltaTime);
+             _currentVelocity.z = Mathf.Lerp(_currentVelocity.z, inputVector.z * targetSpeed, AnimBlendSpeed * Time.fixedDeltaTime);
 
         }
         //입력이 없으면
@@ -120,12 +113,10 @@ public class K_PlayerController : MonoBehaviour
         {
             moveDir = Vector3.zero;
             inputVector = Vector3.zero;
-            
-            
         }
 
-        //_animator.SetFloat(_xVelHash, _currentVelocity.x);
-        //_animator.SetFloat(_yVelHash, _currentVelocity.z);
+        _animator.SetFloat(_xVelHash, _currentVelocity.x);
+        _animator.SetFloat(_yVelHash, _currentVelocity.z);
 
 
     }

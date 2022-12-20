@@ -32,9 +32,6 @@ public class K_JettController : MonoBehaviour
     private float updraftAttempts;
     private float updraftStartTime = 0.0f;
 
-    //private float ultimateAttempts;
-    //private float ultimateStartTime = 0.0f;
-
     public Image dashImg;
     public Image updraftImg;
 
@@ -107,26 +104,7 @@ public class K_JettController : MonoBehaviour
             //1. 대쉬시작후 경과한 시간이 대쉬지속시간보다 작을때
             if (Time.time - dashStartTime <= jettStates.dashDurationSeconds)
             {
-                //2대쉬를 한다.
-
-                //2-1. 방향키를 안누르고 있다면
-                //if (playerController.moveDir.Equals(Vector3.zero))
-               // {
-                    //2-2앞방향으로 대쉬한다.
-                    
-                    //cc.Move(transform.forward * jettStates.dashSpeed * Time.deltaTime);
-                    //print("x");
-               // }
-                //2-3.특정 버튼을 누르고 있다면
-               // else
-               // {
-                    //2-4 해당방향으로 대쉬한다.
-                    
-                    cc.Move(dashDir.normalized * jettStates.dashSpeed * Time.deltaTime);
-                    
-                //}
-                
-
+                cc.Move(dashDir.normalized * jettStates.dashSpeed * Time.deltaTime);
             }
             //3. 대쉬 시작후 경과시간이 대쉬 지속시간을 넘을때 대쉬를 종료한다
             else
