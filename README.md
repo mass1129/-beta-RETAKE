@@ -1,6 +1,11 @@
 # RETAKE
 메타버스 아카데미 1차 프로젝트(2022.6.27 ~ 2022.7.25)  
 
+## 게임 시연 영상
+* Youtube 링크  
+  
+  [![Video Label](http://img.youtube.com/vi/2o7Fp0KeJ1o/0.jpg)](https://youtu.be/2o7Fp0KeJ1o)
+  
 ## 타겟 게임  
 * **발로란트**  :  Player ref  
   <img src="Image/gameMainImage.png" height="200px">  
@@ -127,11 +132,7 @@
   * **int CurScore** : 점수에 따라 사운드 및 미션 UI 관리  
   * **void GenerateEnemy()** :  각각 정해진 위치에 5마리 적 생성  
 
-## 게임 시연 영상
-* Youtube 링크  
-  
-  [![Video Label](http://img.youtube.com/vi/2o7Fp0KeJ1o/0.jpg)](https://youtu.be/2o7Fp0KeJ1o)
-  
+
 ## 개선 사항
 * 애니메이션 이벤트 함수 의존성
   * 애니메이션 이벤트 함수 로 스킬 딜레이 및 연계를 제어하는데 의도치않게 모션이 캔슬되는경우(ex 벽으로 대시) 다음 스킬이 안나가는 버그 발생   
